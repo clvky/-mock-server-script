@@ -11,17 +11,44 @@
         <li><a href="api/user">get:返回user数据(json格式)</a></li>
         <li><a href="api/info">任何方式:返回info数据(json格式)</a></li>
     </ul>
-    <h4>当前页面默认已经发送了一个post请求,返回结果：</h4>
-    <pre><code>
-    {
-        "code": 1,
-        "message": "获取信息成功",
-        "data": {
-            "name": "小明",
-            "age": 233232
-        }
-    }
+    <h4>发送了一个post请求,返回结果：</h4>
+    <button type="button" onclick="sendUserPost()">点击我</button>
+    <pre><code id="userCode"></code></pre>
+    <h4>先增加，后查询</h4>
+    <h5>增加以下数据：</h5>
+    <button type="button" name="button" onclick="addBookInfo()">增加</button>
+    <pre><code id="bookAddData">
+        [
+            {
+                "bookid": 1,
+                "num": 79829,
+                "price": 71,
+                "pagenum": 580,
+                "des": "年气引深该文外最些能其不果被半。般约九王商次原整可每红土量样。越些维总光上状例则眼容但养思于研支。认是科身可西别上近几手气有儿都。影些收经公农空历接府养到交号。",
+                "author": "邓磊"
+            },
+            {
+                "bookid": 2,
+                "num": 31320,
+                "price": 73,
+                "pagenum": 669,
+                "des": "如说京规海上院者计一年史式第做京。得系史完任管就快件根然青。色白构深次志将设委工合图。后国称马严地位取民步界分要复年组先。以离活术达几为设就处又着素社置。任江争头族查日每两你象又各。",
+                "author": "崔霞"
+            },
+            {
+                "bookid": 3,
+                "num": 60880,
+                "price": 90,
+                "pagenum": 336,
+                "des": "按圆权火大身族高干外历装类包石。许整军即地会斗个直非定化门动院。验图我电参拉把路行整部研角各采往斯。者表面才作低儿机参件那入。青这和领实般国正众名色员音位事。",
+                "author": "吴平"
+            }
+        ]
     </code></pre>
+    <h5>查询增加以后的数据：</h5>
+    <button type="button" name="button" onclick="queryBookInfo()">查询</button>
+    <button type="button" name="button" onclick="deleteBookInfo()">删除</button>
+    <pre><code id="bookQueryData"></code></pre>
     <script src="https://cdn.bootcss.com/axios/0.16.2/axios.min.js"></script>
     <script src="js/index.js" charset="utf-8"></script>
 </body>

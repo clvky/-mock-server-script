@@ -6,7 +6,7 @@ var data = {
     message:'获取列表成功',
     results:[]
 }
-var len = 10;
+var len = 3;
 for (var i=0;i<len;i++){
     data.results.push({
         id:i+1,
