@@ -22,7 +22,7 @@ npm run ms #启动服务
 
 ## 使用
 
-1. 启动服务后，书写你需要的返回数据,如下：
+1. 启动服务后，添加并书写你需要的返回数据,如下：
     目录：`/api/user.js`
     ```javascript
     var Mock = require('mockjs')
@@ -47,29 +47,29 @@ npm run ms #启动服务
     ```
 2. 设置你想要的返回路径
 
-在目录：`routes.js`，增加你的相应脚本
-```javascript
-//根目录
-router.all("/",function(req,res,next){
-    res.render("index");
-});
+    在目录：`routes.js`，增加你的相应脚本
+    ```javascript
+    //根目录
+    router.all("/",function(req,res,next){
+        res.render("index");
+    });
 
-//返回用户数据
-router.get(baseDir+"/user",function(req,res,next){
-    //配置你需要的返回json 对象数据
-    res.json(require("./api/user"))
-});
+    //返回用户数据
+    router.get(baseDir+"/user",function(req,res,next){
+        //配置你需要的返回json 对象数据
+        res.json(require("./api/user"))
+    });
 
-//获取提交数据
-router.post(baseDir+"/user",function(req,res,next){
-    let data = req.body.data;
-    let result = {
-        code:1,
-        message:"获取信息成功",
-        data:JSON.parse(req.body.data)
-    }
-    res.json(result);
-});
+    //获取提交数据
+    router.post(baseDir+"/user",function(req,res,next){
+        let data = req.body.data;
+        let result = {
+            code:1,
+            message:"获取信息成功",
+            data:JSON.parse(req.body.data)
+        }
+        res.json(result);
+    });
 
 //返回信息
 router.all(baseDir+"/info",function(req,res,next){
