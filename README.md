@@ -71,12 +71,12 @@ npm run ms #启动服务
         res.json(result);
     });
 
-//返回信息
-router.all(baseDir+"/info",function(req,res,next){
-    //配置你需要的返回json数据
-    res.json(require("./api/info.json"))
-});
-```
+    //返回信息
+    router.all(baseDir+"/info",function(req,res,next){
+        //配置你需要的返回json数据
+        res.json(require("./api/info.json"))
+    });
+    ```
 
 ## 配置文件
 
