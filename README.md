@@ -1,4 +1,4 @@
-## mock server
+## mock-server-script
 
 前提安装`nodejs`
 
