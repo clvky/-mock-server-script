@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mock 服务</title>
+</head>
+<body>
+    <h2>模拟数据服务已经启动</h2>
+    <h4>mock模拟返回数据如下：</h4>
+    <ul>
+        <li><a href="api/user">get:返回user数据(json格式)</a></li>
+        <li><a href="api/info">任何方式:返回info数据(json格式)</a></li>
+    </ul>
+    <h4>当前页面默认已经发送了一个post请求,返回结果：</h4>
+    <pre><code>
+    {
+        "code": 1,
+        "message": "获取信息成功",
+        "data": {
+            "name": "小明",
+            "age": 233232
+        }
+    }
+    </code></pre>
+    <script src="https://cdn.bootcss.com/axios/0.16.2/axios.min.js"></script>
+    <script src="js/index.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "mock-server-script",
+  "version": "1.0.0",
+  "description": "mock",
+  "main": "index.js",
+  "scripts": {
+    "ms": "node app.js"
+  },
+  "keywords": [
+    "mock"
+  ],
+  "author": "renxl",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "mockjs": "^1.0.1-beta3",
+    "nodemon": "^1.11.0"
+  }
+}
