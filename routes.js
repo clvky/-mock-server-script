@@ -3,13 +3,14 @@ const express = require("express");
 const router = express.Router();
 const baseDir = config.baseDir;
 
-//获取mock服务
+//根目录
 router.all("/",function(req,res,next){
     res.render("index");
 });
 
 //返回用户数据
 router.get(baseDir+"/user",function(req,res,next){
+    //配置你需要的返回json 对象数据
     res.json(require("./api/user"))
 });
 
@@ -26,6 +27,7 @@ router.post(baseDir+"/user",function(req,res,next){
 
 //返回信息
 router.all(baseDir+"/info",function(req,res,next){
+    //配置你需要的返回json数据
     res.json(require("./api/info.json"))
 });
 

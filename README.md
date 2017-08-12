@@ -46,9 +46,14 @@ npm run ms #启动服务
     module.exports = data
     ```
 2. 设置你想要的返回路径
-    
-    在目录：`routes.js`，设置你的请求路径 和 返回数据
+
+    在目录：`routes.js`，设置你的 **请求路径** 和 **返回数据** 和 **请求方式**
     ```javascript
+    const config = require("./config")
+    const express = require("express");
+    const router = express.Router();
+    const baseDir = config.baseDir;
+
     //根目录
     router.all("/",function(req,res,next){
         res.render("index");
@@ -76,6 +81,8 @@ npm run ms #启动服务
         //配置你需要的返回json数据
         res.json(require("./api/info.json"))
     });
+
+    module.exports = router;
     ```
 
 ## 配置文件
