@@ -13,7 +13,7 @@
 ### 安装
 
 ```bash
-git clone 项目地址 # clone项目
+git clone git@github.com:clvky/mock-server-script.git # clone项目
 npm i  #安装依赖
 npm run ms #启动服务
 ```
