@@ -46,8 +46,8 @@ npm run ms #启动服务
     module.exports = data
     ```
 2. 设置你想要的返回路径
-
-    在目录：`routes.js`，增加你的相应脚本
+    
+    在目录：`routes.js`，设置你的请求路径 和 返回数据
     ```javascript
     //根目录
     router.all("/",function(req,res,next){
